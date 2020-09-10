@@ -28,8 +28,13 @@ public class inter_hitorico extends javax.swing.JFrame {
 
         Painel_fundo = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        text_codigo_protocol = new javax.swing.JLabel();
         campo_cod_protocol = new javax.swing.JFormattedTextField();
+        texte_date = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        text_status_protocolo = new javax.swing.JLabel();
+        campo_cod_date = new javax.swing.JFormattedTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -37,13 +42,44 @@ public class inter_hitorico extends javax.swing.JFrame {
 
         jButton1.setText("Adicionar a lista");
 
-        jLabel1.setText("CODICO DO PROTOCOLO :");
+        text_codigo_protocol.setBackground(new java.awt.Color(51, 51, 51));
+        text_codigo_protocol.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        text_codigo_protocol.setForeground(new java.awt.Color(0, 204, 255));
+        text_codigo_protocol.setText("CODICO DO PROTOCOLO :");
 
         try {
             campo_cod_protocol.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("######-#")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+
+        texte_date.setBackground(new java.awt.Color(51, 51, 51));
+        texte_date.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        texte_date.setForeground(new java.awt.Color(0, 204, 255));
+        texte_date.setText("Data :");
+
+        jLabel3.setBackground(new java.awt.Color(51, 51, 51));
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 204, 255));
+        jLabel3.setText("Tipo de carga :");
+
+        text_status_protocolo.setBackground(new java.awt.Color(51, 51, 51));
+        text_status_protocolo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        text_status_protocolo.setForeground(new java.awt.Color(0, 204, 255));
+        text_status_protocolo.setText("Status do protocolo :");
+
+        try {
+            campo_cod_date.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("## / ## / ####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        campo_cod_date.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campo_cod_dateActionPerformed(evt);
+            }
+        });
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecionar", "Alimentos", "Vacinas Covid-19", "Eletrônicos", "Automóveis" }));
 
         javax.swing.GroupLayout Painel_fundoLayout = new javax.swing.GroupLayout(Painel_fundo);
         Painel_fundo.setLayout(Painel_fundoLayout);
@@ -53,21 +89,48 @@ public class inter_hitorico extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(26, 26, 26))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Painel_fundoLayout.createSequentialGroup()
+            .addGroup(Painel_fundoLayout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campo_cod_protocol, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(104, 104, 104))
+                .addGroup(Painel_fundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Painel_fundoLayout.createSequentialGroup()
+                        .addGroup(Painel_fundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(Painel_fundoLayout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(text_status_protocolo))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Painel_fundoLayout.createSequentialGroup()
+                        .addGroup(Painel_fundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(Painel_fundoLayout.createSequentialGroup()
+                                .addComponent(texte_date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(campo_cod_date, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(219, 219, 219))
+                            .addGroup(Painel_fundoLayout.createSequentialGroup()
+                                .addComponent(text_codigo_protocol, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(campo_cod_protocol, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(104, 104, 104))))
         );
         Painel_fundoLayout.setVerticalGroup(
             Painel_fundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Painel_fundoLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
+                .addGroup(Painel_fundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(text_codigo_protocol, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campo_cod_protocol, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(Painel_fundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(campo_cod_protocol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 199, Short.MAX_VALUE)
+                    .addComponent(texte_date, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campo_cod_date, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGroup(Painel_fundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
+                .addComponent(text_status_protocolo)
+                .addGap(40, 40, 40)
                 .addComponent(jButton1)
                 .addGap(18, 18, 18))
         );
@@ -85,6 +148,10 @@ public class inter_hitorico extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void campo_cod_dateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campo_cod_dateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campo_cod_dateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,8 +191,13 @@ public class inter_hitorico extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Painel_fundo;
+    private javax.swing.JFormattedTextField campo_cod_date;
     private javax.swing.JFormattedTextField campo_cod_protocol;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel text_codigo_protocol;
+    private javax.swing.JLabel text_status_protocolo;
+    private javax.swing.JLabel texte_date;
     // End of variables declaration//GEN-END:variables
 }
