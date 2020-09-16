@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package inteface_login;
+package intefaces;
 
 /**
  *
@@ -47,11 +47,11 @@ public class Inter_adm extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
-        imgCaminhao_01.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/imagens/caminhao-motor x34.png"))); // NOI18N
+        imgCaminhao_01.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens_sistema/caminhao-motor x34.png"))); // NOI18N
 
-        imgCaminhao_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/imagens/caminhao-motor x34.png"))); // NOI18N
+        imgCaminhao_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens_sistema/caminhao-motor x34.png"))); // NOI18N
 
-        imgCaminhao_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/imagens/caminhao-motor x34.png"))); // NOI18N
+        imgCaminhao_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens_sistema/caminhao-motor x34.png"))); // NOI18N
 
         jLabel1.setBackground(new java.awt.Color(51, 51, 51));
         jLabel1.setForeground(new java.awt.Color(0, 204, 255));
@@ -65,11 +65,11 @@ public class Inter_adm extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 204, 255));
         jLabel3.setText("Fazer novo protocolo");
 
-        imgSeta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/imagens/seta.png"))); // NOI18N
+        imgSeta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens_sistema/seta.png"))); // NOI18N
 
-        imgSeta1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/imagens/seta.png"))); // NOI18N
+        imgSeta1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens_sistema/seta.png"))); // NOI18N
 
-        imgSeta2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/imagens/seta.png"))); // NOI18N
+        imgSeta2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens_sistema/seta.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -104,10 +104,10 @@ public class Inter_adm extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(imgCaminhao_01)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(imgSeta2))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(imgSeta2)
+                    .addComponent(imgCaminhao_01, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
@@ -175,7 +175,11 @@ public class Inter_adm extends javax.swing.JFrame {
             }
         });
     }
-
+    
+    //apartir daqui é que se programa
+    
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel imgCaminhao_01;
     private javax.swing.JLabel imgCaminhao_2;

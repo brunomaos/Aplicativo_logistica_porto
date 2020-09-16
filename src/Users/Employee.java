@@ -5,14 +5,14 @@ package Users;
  */
 public class Employee {
     //status: ok
-    String name = "employee";
-    String senha = "1234";
+    final String name = "employee";
+    final String senha = "1234";
 
     public int verificarUserEmployee(String name , String senha){
         int aux = 0;
-        if(this.name.endsWith(name)){
+        if(this.name.equals(name)){
             aux += 1;
-            if(this.senha.endsWith(senha)){
+            if(this.senha.equals(senha)){
                 aux += 1;
             }
         }

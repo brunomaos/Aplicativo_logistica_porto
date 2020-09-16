@@ -4,14 +4,14 @@ package Users;
  */
 public class Admin {
     //status : ok
-    String name ="admin";
-    String senha = "1234";
+    final String name ="admin";
+    final String senha = "1234";
     
     public int verificarUserAdm(String name , String senha){
         int aux = 0;
-        if(this.name.endsWith(name)){
+        if(this.name.equals(name)){
             aux += 1;
-            if (this.senha.endsWith(senha)){
+            if (this.senha.equals(senha)){
             aux += 1;
             }
         }

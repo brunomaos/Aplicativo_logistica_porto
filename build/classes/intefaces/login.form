@@ -100,7 +100,7 @@
               <Color blue="ff" green="cc" red="0" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Interface/imagens/user.png"/>
+              <Image iconType="3" name="/imagens_sistema/user.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="  User: "/>
           </Properties>

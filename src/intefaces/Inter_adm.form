@@ -87,10 +87,10 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="imgCaminhao_01" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" pref="26" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jLabel3" max="32767" attributes="0"/>
                       <Component id="imgSeta2" min="-2" max="-2" attributes="0"/>
+                      <Component id="imgCaminhao_01" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
@@ -121,21 +121,21 @@
         <Component class="javax.swing.JLabel" name="imgCaminhao_01">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Interface/imagens/caminhao-motor x34.png"/>
+              <Image iconType="3" name="/imagens_sistema/caminhao-motor x34.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="imgCaminhao_2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Interface/imagens/caminhao-motor x34.png"/>
+              <Image iconType="3" name="/imagens_sistema/caminhao-motor x34.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="imgCaminhao_3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Interface/imagens/caminhao-motor x34.png"/>
+              <Image iconType="3" name="/imagens_sistema/caminhao-motor x34.png"/>
             </Property>
           </Properties>
         </Component>
@@ -175,21 +175,21 @@
         <Component class="javax.swing.JLabel" name="imgSeta">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Interface/imagens/seta.png"/>
+              <Image iconType="3" name="/imagens_sistema/seta.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="imgSeta1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Interface/imagens/seta.png"/>
+              <Image iconType="3" name="/imagens_sistema/seta.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="imgSeta2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Interface/imagens/seta.png"/>
+              <Image iconType="3" name="/imagens_sistema/seta.png"/>
             </Property>
           </Properties>
         </Component>

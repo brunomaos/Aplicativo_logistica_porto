@@ -1,4 +1,4 @@
-package inteface_login;
+package intefaces;
 
 import Users.Admin;
 import Users.Employee;
@@ -69,7 +69,7 @@ public class login extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
         texto_user.setForeground(new java.awt.Color(0, 204, 255));
-        texto_user.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interface/imagens/user.png"))); // NOI18N
+        texto_user.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens_sistema/user.png"))); // NOI18N
         texto_user.setText("  User: ");
 
         campo_texto_user.setForeground(new java.awt.Color(102, 102, 102));
