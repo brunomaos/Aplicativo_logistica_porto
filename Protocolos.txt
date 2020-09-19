@@ -1,4 +1,4 @@
-Codigo do protocolo; 123456
-Data do protocolo; 11/11/2001
-Tipo de carga; vacinas-covid19
-Status do protocolo ;Aguardando entrega
+Codigo do protocolo; 
+Data do protocolo; 
+Tipo de carga; 
+Status do protocolo ;

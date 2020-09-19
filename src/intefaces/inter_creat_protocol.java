@@ -46,6 +46,7 @@ public class inter_creat_protocol extends javax.swing.JFrame {
         campoTipoDeCarga = new javax.swing.JTextField();
         campoCodProtocolo = new javax.swing.JTextField();
         campoDeStatus = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,22 +60,22 @@ public class inter_creat_protocol extends javax.swing.JFrame {
         });
 
         text_codigo_protocol.setBackground(new java.awt.Color(51, 51, 51));
-        text_codigo_protocol.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        text_codigo_protocol.setFont(new java.awt.Font("Microsoft Himalaya", 1, 18)); // NOI18N
         text_codigo_protocol.setForeground(new java.awt.Color(0, 204, 255));
         text_codigo_protocol.setText("CODICO DO PROTOCOLO :");
 
         text_date.setBackground(new java.awt.Color(51, 51, 51));
-        text_date.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        text_date.setFont(new java.awt.Font("Microsoft Himalaya", 1, 24)); // NOI18N
         text_date.setForeground(new java.awt.Color(0, 204, 255));
         text_date.setText("Data :");
 
         text_tipo_carga.setBackground(new java.awt.Color(51, 51, 51));
-        text_tipo_carga.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        text_tipo_carga.setFont(new java.awt.Font("Microsoft Himalaya", 1, 18)); // NOI18N
         text_tipo_carga.setForeground(new java.awt.Color(0, 204, 255));
         text_tipo_carga.setText("Tipo de carga :");
 
         text_status_protocolo.setBackground(new java.awt.Color(51, 51, 51));
-        text_status_protocolo.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        text_status_protocolo.setFont(new java.awt.Font("Microsoft Himalaya", 1, 24)); // NOI18N
         text_status_protocolo.setForeground(new java.awt.Color(0, 204, 255));
         text_status_protocolo.setText("Status do protocolo :");
 
@@ -102,6 +103,15 @@ public class inter_creat_protocol extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setForeground(new java.awt.Color(0, 204, 153));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens_sistema/setaVoltar.png"))); // NOI18N
+        jLabel1.setText("Voltar");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout Painel_fundoLayout = new javax.swing.GroupLayout(Painel_fundo);
         Painel_fundo.setLayout(Painel_fundoLayout);
         Painel_fundoLayout.setHorizontalGroup(
@@ -113,50 +123,50 @@ public class inter_creat_protocol extends javax.swing.JFrame {
             .addGroup(Painel_fundoLayout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addGroup(Painel_fundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Painel_fundoLayout.createSequentialGroup()
-                        .addComponent(text_codigo_protocol, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(campoCodProtocolo, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(106, 106, 106))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Painel_fundoLayout.createSequentialGroup()
+                    .addGroup(Painel_fundoLayout.createSequentialGroup()
                         .addComponent(text_date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(campoDeData, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(279, 279, 279))
+                        .addGap(257, 257, 257))
                     .addGroup(Painel_fundoLayout.createSequentialGroup()
                         .addGroup(Painel_fundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(Painel_fundoLayout.createSequentialGroup()
-                                .addComponent(text_tipo_carga)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(campoTipoDeCarga, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel1)
                             .addGroup(Painel_fundoLayout.createSequentialGroup()
                                 .addComponent(text_status_protocolo)
+                                .addGap(27, 27, 27)
+                                .addComponent(campoDeStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(Painel_fundoLayout.createSequentialGroup()
+                                .addComponent(text_tipo_carga)
+                                .addGap(18, 18, 18)
+                                .addComponent(campoTipoDeCarga, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(Painel_fundoLayout.createSequentialGroup()
+                                .addComponent(text_codigo_protocol, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(campoDeStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 156, Short.MAX_VALUE))))
+                                .addComponent(campoCodProtocolo, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         Painel_fundoLayout.setVerticalGroup(
             Painel_fundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Painel_fundoLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addGap(17, 17, 17)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
                 .addGroup(Painel_fundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text_codigo_protocol, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campoCodProtocolo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(Painel_fundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(text_date, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(campoDeData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addGroup(Painel_fundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Painel_fundoLayout.createSequentialGroup()
-                        .addGroup(Painel_fundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(text_tipo_carga)
-                            .addComponent(campoTipoDeCarga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(63, 63, 63))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Painel_fundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(text_status_protocolo)
-                        .addComponent(campoDeStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(38, 38, 38)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addGroup(Painel_fundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_tipo_carga)
+                    .addComponent(campoTipoDeCarga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(Painel_fundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_status_protocolo)
+                    .addComponent(campoDeStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
                 .addComponent(botao_add)
                 .addGap(18, 18, 18))
         );
@@ -173,6 +183,7 @@ public class inter_creat_protocol extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void botao_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_addActionPerformed
@@ -197,6 +208,13 @@ public class inter_creat_protocol extends javax.swing.JFrame {
     private void campoDeStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDeStatusActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoDeStatusActionPerformed
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+        Inter_adm id = new Inter_adm();
+        id.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -253,6 +271,7 @@ public class inter_creat_protocol extends javax.swing.JFrame {
     private javax.swing.JTextField campoDeData;
     private javax.swing.JTextField campoDeStatus;
     private javax.swing.JTextField campoTipoDeCarga;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel text_codigo_protocol;
     private javax.swing.JLabel text_date;
     private javax.swing.JLabel text_status_protocolo;

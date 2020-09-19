@@ -5,6 +5,9 @@
  */
 package intefaces;
 
+import java.text.ParseException;
+
+
 /**
  *
  * @author bruno
@@ -17,7 +20,7 @@ public class Inter_adm extends javax.swing.JFrame {
     public Inter_adm() {
         initComponents();
     }
-
+     
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -37,9 +40,9 @@ public class Inter_adm extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        imgSeta = new javax.swing.JLabel();
-        imgSeta1 = new javax.swing.JLabel();
         imgSeta2 = new javax.swing.JLabel();
+        imgSeta3 = new javax.swing.JLabel();
+        imgSeta1 = new javax.swing.JLabel();
 
         jCheckBox1.setText("jCheckBox1");
 
@@ -65,11 +68,26 @@ public class Inter_adm extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 204, 255));
         jLabel3.setText("Fazer novo protocolo");
 
-        imgSeta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens_sistema/seta.png"))); // NOI18N
+        imgSeta2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens_sistema/seta.png"))); // NOI18N
+        imgSeta2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                imgSeta2MouseClicked(evt);
+            }
+        });
+
+        imgSeta3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens_sistema/seta.png"))); // NOI18N
 
         imgSeta1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens_sistema/seta.png"))); // NOI18N
-
-        imgSeta2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens_sistema/seta.png"))); // NOI18N
+        imgSeta1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                imgSeta1MouseMoved(evt);
+            }
+        });
+        imgSeta1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                imgSeta1MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -85,20 +103,20 @@ public class Inter_adm extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(imgSeta2))
+                        .addComponent(imgSeta1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(imgCaminhao_2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(imgSeta))
+                        .addComponent(imgSeta2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(imgCaminhao_3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(imgSeta1)))
-                .addContainerGap(122, Short.MAX_VALUE))
+                        .addComponent(imgSeta3)))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,7 +124,7 @@ public class Inter_adm extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(imgSeta2)
+                    .addComponent(imgSeta1)
                     .addComponent(imgCaminhao_01, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -114,15 +132,15 @@ public class Inter_adm extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(imgCaminhao_2)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(imgSeta))
+                    .addComponent(imgSeta2))
                 .addGap(37, 37, 37)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(imgCaminhao_3)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(imgSeta1))
-                .addContainerGap(50, Short.MAX_VALUE))
+                    .addComponent(imgSeta3))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -136,9 +154,28 @@ public class Inter_adm extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(416, 329));
+        setSize(new java.awt.Dimension(380, 339));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+    
+    private void imgSeta1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgSeta1MouseClicked
+        try {
+            inter_creat_protocol icp = new inter_creat_protocol();
+            icp.setVisible(true);
+            this.dispose();
+            
+        } catch (ParseException ex) {
+            System.out.println("Erro ao abrir tela");
+        }
+    }//GEN-LAST:event_imgSeta1MouseClicked
+
+    private void imgSeta2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgSeta2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_imgSeta2MouseClicked
+
+    private void imgSeta1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgSeta1MouseMoved
+        
+    }//GEN-LAST:event_imgSeta1MouseMoved
 
     /**
      * @param args the command line arguments
@@ -184,9 +221,9 @@ public class Inter_adm extends javax.swing.JFrame {
     private javax.swing.JLabel imgCaminhao_01;
     private javax.swing.JLabel imgCaminhao_2;
     private javax.swing.JLabel imgCaminhao_3;
-    private javax.swing.JLabel imgSeta;
     private javax.swing.JLabel imgSeta1;
     private javax.swing.JLabel imgSeta2;
+    private javax.swing.JLabel imgSeta3;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
